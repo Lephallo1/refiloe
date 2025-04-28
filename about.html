@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Refiloe | Journalism & Media Student</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 🌸 ABOUT PAGE STYLES */
+        #about {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--soft-pink), #fff);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .about-image img {
+            width: 300px; /* Decreased size */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 20px;
+            border: 10px solid white;
+            box-shadow: 0 20px 40px rgba(255, 107, 157, 0.3);
+        }
+
+        .about-image::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--rose-quartz);
+            border-radius: 20px;
+            top: -20px;
+            left: -20px;
+            z-index: -1;
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: var(--glitter);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .university-badge {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 30px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.1);
+        }
+
+        .university-badge img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .skills-section {
+            margin-top: 40px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--hot-pink);
+            color: white;
+            border-radius: 50px;
+            margin: 5px;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 10px rgba(255, 107, 157, 0.3);
+        }
+
+        /* ✨ NAVIGATION ENHANCEMENTS */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            border-bottom: 1px solid rgba(255, 107, 157, 0.2);
+            box-shadow: 0 2px 15px rgba(255, 107, 157, 0.1);
+        }
+
+        .navbar-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1.5rem;
+            background: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.1);
+            border: 1px solid rgba(255, 107, 157, 0.1);
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: var(--black) !important;
+        }
+
+        .nav-link:hover {
+            background: var(--soft-pink);
+            color: var(--hot-pink) !important;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            background: var(--hot-pink);
+            color: white !important;
+            box-shadow: 0 3px 10px rgba(255, 107, 157, 0.3);
+        }
+
+        /* 🦋 ANIMATIONS */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* 📱 RESPONSIVE */
+        @media (max-width: 992px) {
+            .navbar-links {
+                position: static;
+                transform: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 1rem;
+                border-radius: 0;
+                box-shadow: none;
+                border: none;
+                display: none;
+            }
+
+            .navbar-links.active {
+                display: flex;
+            }
+
+            .nav-link {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .about-text h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glitter-overlay"></div>
+
+    <!-- 👑 NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Refiloe ✨</a>
+            <div class="navbar-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="testimonials.html" class="nav-link">Testimonials</a>
+                <a href="CONTACT.html" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 🌸 ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/images/WhatsApp Image 2025-04-27 at 20.23.17_5a7273e8.jpg" alt="Refiloe at University">
+                </div>
+                <div class="about-text">
+                    <h2>Storyteller in the Making</h2>
+                    <p>I'm <strong>Refiloe Phephetho</strong>, a passionate 2nd-year Journalism & Media student at <strong>Limkokwing University of Creative Technology</strong> in Lesotho. My journey revolves around crafting compelling narratives through digital and traditional media.</p>
+
+                    <div class="university-badge">
+                        <img src="assets/images/download.png" alt="Limkokwing University">
+                        <div>
+                            <h4>Limkokwing University</h4>
+                            <p>Bachelor's in Journalism & Media (Year 2)</p>
+                        </div>
+                    </div>
+
+                    <div class="skills-section">
+                        <h3>My Strengths</h3>
+                        <div>
+                            <span class="skill-tag">Storytelling</span>
+                            <span class="skill-tag">Digital Media</span>
+                            <span class="skill-tag">Adobe InDesign</span>
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Research</span>
+                            <span class="skill-tag">Content Writing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const toggleBtn = document.querySelector('.nav-toggle');
+        const navbarLinks = document.querySelector('.navbar-links');
+
+        toggleBtn.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

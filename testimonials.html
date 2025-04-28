@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | Refiloe Phephetho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 🌸 TESTIMONIALS STYLES */
+        #testimonials {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #fff, var(--soft-pink));
+            position: relative;
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonials-header h2 {
+            font-size: 3rem;
+            background: var(--glitter);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.1);
+            margin: 20px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.2);
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px 0;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--rose-quartz);
+        }
+
+        .author-info h4 {
+            color: var(--hot-pink);
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--black);
+            opacity: 0.8;
+        }
+                /* ✨ NAVIGATION ENHANCEMENTS */
+                .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            border-bottom: 1px solid rgba(255, 107, 157, 0.2);
+            box-shadow: 0 2px 15px rgba(255, 107, 157, 0.1);
+        }
+
+        .navbar-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1.5rem;
+            background: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.1);
+            border: 1px solid rgba(255, 107, 157, 0.1);
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: var(--black) !important;
+        }
+
+        .nav-link:hover {
+            background: var(--soft-pink);
+            color: var(--hot-pink) !important;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            background: var(--hot-pink);
+            color: white !important;
+            box-shadow: 0 3px 10px rgba(255, 107, 157, 0.3);
+        }
+
+        /* ✨ TESTIMONIAL GRID */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* 📱 RESPONSIVE */
+        @media (max-width: 768px) {
+            .testimonials-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 👑 NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home.html" class="navbar-brand">Refiloe ✨</a>
+            <div class="navbar-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="testimonials.html" class="nav-link">Testimonials</a>
+                <a href="CONTACT.html" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 🌟 TESTIMONIALS SECTION -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2>Kind Words</h2>
+                <p>What professors and colleagues say about my work</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Refiloe's investigative piece on campus life demonstrated exceptional research skills and a unique narrative voice that captivated readers."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/IMG-20250312-WA0025.jpg" alt="Professor M. Khumalo" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Prof. M. Monkhe</h4>
+                                <p>Media Studies Lecturer, Limkokwing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Her magazine layout designs show remarkable attention to typographic hierarchy and visual storytelling - a true eye for detail."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/download.jpg" alt="Editor T. Molefi" class="author-avatar">
+                            <div class="author-info">
+                                <h4>T. Molefi</h4>
+                                <p>Editor, Campus Times</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Refiloe's photo essays capture authentic moments with emotional depth. She has a journalist's instinct for the decisive moment."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/images (2).jpg" alt="Photographer L. Dlamini" class="author-avatar">
+                            <div class="author-info">
+                                <h4>L. Dlamini</h4>
+                                <p>Photojournalism Mentor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const toggleBtn = document.querySelector('.nav-toggle');
+        const navbarLinks = document.querySelector('.navbar-links');
+
+        toggleBtn.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

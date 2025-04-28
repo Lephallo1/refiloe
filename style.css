@@ -1,0 +1,91 @@
+/* 🌸 Ultra-Feminine Glam Theme 🌸 */
+:root {
+    --pink: #ff9bb3;
+    --hot-pink: #ff6b9d;
+    --soft-pink: #ffdfea;
+    --glitter: linear-gradient(45deg, #ff9bb3, #ff6b9d, #ffb6c1, #ffdfea);
+    --white: #fff;
+    --black: #333;
+    --gold: #f9d56e;
+    --transition: all 0.3s ease;
+    --shadow: 0 5px 20px rgba(255, 107, 157, 0.2);
+}
+
+/* 🎀 Base Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--soft-pink);
+    color: var(--black);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--hot-pink);
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+/* 👑 Buttons */
+.btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn-pink {
+    background: var(--hot-pink);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.btn-pink:hover {
+    transform: translateY(-3px);
+    background: var(--pink);
+}
+
+.btn-outline {
+    border: 2px solid var(--hot-pink);
+    color: var(--hot-pink);
+}
+
+.btn-outline:hover {
+    background: var(--hot-pink);
+    color: white;
+}
+
+/* ✨ Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(255, 107, 157, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: var(--hot-pink);
+}
+
+.nav-link {
+    color: var(--black);
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--hot-pink);
+}
+
+.active {
+    color: var(--hot-pink) !important;
+    font-weight: 600;
+}

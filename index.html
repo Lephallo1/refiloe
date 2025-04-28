@@ -1,0 +1,294 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refiloe Phephetho | Creative Queen ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 💖 HERO SECTION */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the content */
+            background: linear-gradient(135deg, var(--soft-pink), #fff);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/images/glitter-overlay.png') repeat;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: var(--glitter);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: glitter 3s infinite;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            width: 1000px;
+            height: 800px;
+            max-width: 100%;
+            border-radius: 20px;
+            border: 10px solid white;
+            box-shadow: 0 20px 40px rgba(255, 107, 157, 0.3);
+        }
+
+        /* ✨ NAVIGATION ENHANCEMENTS */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            border-bottom: 1px solid rgba(255, 107, 157, 0.2);
+            box-shadow: 0 2px 15px rgba(255, 107, 157, 0.1);
+        }
+
+        .navbar-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1.5rem;
+            background: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.1);
+            border: 1px solid rgba(255, 107, 157, 0.1);
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: var(--black) !important;
+        }
+
+        .nav-link:hover {
+            background: var(--soft-pink);
+            color: var(--hot-pink) !important;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            background: var(--hot-pink);
+            color: white !important;
+            box-shadow: 0 3px 10px rgba(255, 107, 157, 0.3);
+        }
+
+        /* ✨ GLITTER OVERLAY */
+        .glitter-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/images/glitter-sparkle.png') repeat;
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 1;
+            animation: glitterFlow 20s linear infinite;
+        }
+
+        /* 💎 SOCIAL ICONS */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: var(--hot-pink);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(45deg);
+            transition: var(--transition);
+        }
+
+        .social-icons i {
+            transform: rotate(-45deg);
+        }
+
+        .social-icons a:hover {
+            background: var(--gold);
+            transform: rotate(45deg) scale(1.1);
+        }
+                    
+        .navbar-links.active {
+                display: flex;
+            }
+            
+            .nav-link {
+                width: 100%;
+                text-align: center;
+            }
+
+        /* 👑 SCROLL INDICATOR */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--hot-pink);
+            font-size: 1.2rem;
+            animation: bounce 2s infinite;
+            text-align: center;
+        }
+
+        .scroll-indicator i {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* 🦋 ANIMATIONS */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes glitter {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes glitterFlow {
+            0% { background-position: 0 0; }
+            100% { background-position: 1000px 1000px; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) translateX(-50%); }
+            50% { transform: translateY(-10px) translateX(-50%); }
+        }
+
+        @keyframes floatPetal {
+            to {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* 📱 RESPONSIVE */
+        @media (max-width: 992px) {
+            .navbar-links {
+                position: static;
+                transform: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 1rem;
+                border-radius: 0;
+                box-shadow: none;
+                border: none;
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glitter-overlay"></div>
+
+    <!-- 👑 NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Refiloe ✨</a>
+            <div class="navbar-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="testimonials.html" class="nav-link">Testimonials</a>
+                <a href="CONTACT.html" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 💖 HERO SECTION -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hello Queen! 👑</h1>
+                <p class="lead">I'm Refiloe, a creative designer & web developer with a passion for beautiful digital experiences.</p>
+                <div class="hero-buttons">
+                    <a href="portfolio.html" class="btn btn-pink">See My Work</a>
+                    <a href="contact.html" class="btn btn-outline">Hire Me</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/WhatsApp Image 2025-04-27 at 20.11.32_059a0ce2.jpg" alt="Refiloe Phephetho">
+            </div>
+        </div>
+    </section>
+
+    <div class="scroll-indicator">
+        <i class="fas fa-crown"></i>
+        <span>Scroll Down</span>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const toggleBtn = document.querySelector('.nav-toggle');
+        const navbarLinks = document.querySelector('.navbar-links');
+
+        toggleBtn.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+
+        // Rose Petals on Hover
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.95) {
+                const petal = document.createElement('div');
+                petal.innerHTML = '🌸';
+                petal.style.position = 'fixed';
+                petal.style.left = e.pageX + 'px';
+                petal.style.top = e.pageY + 'px';
+                petal.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                petal.style.opacity = Math.random();
+                petal.style.animation = `floatPetal ${Math.random() * 3 + 2}s linear forwards`;
+                document.body.appendChild(petal);
+                setTimeout(() => petal.remove(), 3000);
+            }
+        });
+    </script>
+</body>
+</html>
